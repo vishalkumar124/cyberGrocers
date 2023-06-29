@@ -1,0 +1,37 @@
+{
+  "name": "CyberGrocers",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "MERN+Redux shopping website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm run start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Yash Pratap Singh",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "compress": "^0.99.0",
+    "compression": "^1.7.4",
+    "concurrently": "^7.0.0",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "helmet": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.14",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15"
+  }
+}
